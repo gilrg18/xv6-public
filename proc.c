@@ -7,6 +7,10 @@
 #include "proc.h"
 #include "spinlock.h"
 
+//MINIPROYECTO1
+struct proc * pToKill;
+//MINIPROYECTO1
+
 struct {
   struct spinlock lock;
   struct proc proc[NPROC];
@@ -555,6 +559,16 @@ procdump(void)
   }
 }
 
+
 void printHello(void){
   cprintf("Hola desde el console\n");
 }
+
+//MINIPROYECTO1
+int killproc(void){
+  if (pToKill!=0){
+    kill(pToKill->pid);
+  }
+  return 0;
+}
+//MINIPROYECTO1
