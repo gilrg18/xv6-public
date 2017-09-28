@@ -564,10 +564,11 @@ void printHello(void){
   cprintf("Hola desde el console\n");
 }
 
-//MINIPROYECTO1
+//MINIPROYECTO1pToKill=my_proc();
 int killproc(void){
+ 
   if (pToKill!=0){
-    kill(pToKill->pid);
+    //kill(pToKill->pid);
   }
   return 0;
 }
