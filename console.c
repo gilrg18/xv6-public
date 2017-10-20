@@ -188,13 +188,13 @@ struct {
 
 #define C(x)  ((x)-'@')  // Control-x
 //MINIPROYECTO1
-extern int killproc(void);
+extern void killproc(void);
 //MINIPROYECTO1
-extern void printHello(void); //funcion externa que se encuentra en otro modulo
+//extern void printHello(void); //funcion externa que se encuentra en otro modulo
 void
 consoleintr(int (*getc)(void))
 {
-  int c, doprocdump = 0, doPrintHello = 0;
+  int c, doprocdump = 0, doKillProc = 0;
 
   acquire(&cons.lock);
   while((c = getc()) >= 0){
@@ -208,6 +208,7 @@ consoleintr(int (*getc)(void))
       //doPrintHello = 1;
       //KILLPROCESS MINIPROYECTO1
       killproc();
+      doKillProc = 1;
       break;
       //KILLPROCESS MINIPROYECTO1
     case C('U'):  // Kill line.
@@ -240,8 +241,11 @@ consoleintr(int (*getc)(void))
   if(doprocdump) {
     procdump();  // now call procdump() wo. cons.lock held
   }
-  if(doPrintHello) {
-    printHello(); 
+  //if(doPrintHello) {
+    //printHello(); 
+  //}
+  if(doKillProc){
+    killproc();
   }
 }
 

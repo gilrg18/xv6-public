@@ -3,8 +3,9 @@
 #include "user.h"
 
 int
-main(int argc, char const *argv[])
+main(int argc, char *argv[])
 {
 	for(;;){};
 		exit();
+		return 0;
 }
