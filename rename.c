@@ -12,6 +12,6 @@ main(int argc, char *argv[])
   if(link(argv[1], argv[2]) < 0)
     printf(2, "rename %s %s: failed\n", argv[1], argv[2]);
   
-  unlink(argv[1]);  
+    unlink(argv[1]);  
   exit();
 }

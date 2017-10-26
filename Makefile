@@ -181,8 +181,10 @@ UPROGS=\
 	_fibo\
 	_infinite\
 	_shmtest\
-	_test_signal\ 
 	_rename\
+	_cp\
+	_test_signal\ 
+	
 
 fs.img: mkfs README $(UPROGS)
 	./mkfs fs.img README $(UPROGS)
