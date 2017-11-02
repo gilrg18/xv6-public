@@ -32,6 +32,7 @@ int shdemat(int);
 int getppid(void); //Proyecto2
 int signal(int, sighandler_t); //Proyecto2
 int killsignal(int pid, int signum); //Proyecto2
+int chmod(char *, char *);
 
 // ulib.c
 int stat(char*, struct stat*);

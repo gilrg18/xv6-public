@@ -29,3 +29,4 @@
 #define SYS_getppid 28 //Proyecto2
 #define SYS_signal 29  //Proyecto2
 #define SYS_killsignal 30 //Proyecto2
+#define SYS_chmod 31

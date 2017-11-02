@@ -183,6 +183,7 @@ UPROGS=\
 	_shmtest\
 	_rename\
 	_cp\
+	_chmod\
 	_test_signal\ 
 	
 
