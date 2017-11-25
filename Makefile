@@ -185,6 +185,8 @@ UPROGS=\
 	_cp\
 	_chmod\
 	_login\
+	_useradd\
+	_exit\
 	_test_signal\ 
 
 	

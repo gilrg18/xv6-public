@@ -113,6 +113,7 @@ extern int sys_getppid(void); //Proyecto2
 extern int sys_signal(void); //Proyecto2
 extern int sys_killsignal(void); //Proyecto2
 extern int sys_chmod(void);
+extern int sys_logoff(void);
 
 static int (*syscalls[])(void) = {
 [SYS_fork]    sys_fork,
@@ -146,6 +147,7 @@ static int (*syscalls[])(void) = {
 [SYS_signal] sys_signal,   //Proyecto2
 [SYS_killsignal] sys_killsignal, //Proyecto2
 [SYS_chmod] sys_chmod,
+[SYS_logoff] sys_logoff,
 };
 
 void
